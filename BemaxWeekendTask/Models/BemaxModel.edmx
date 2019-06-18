@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BemaxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AboutFistContent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="text" />
+        </EntityType>
+        <EntityType Name="AboutRemax">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="nvarchar" MaxLength="250" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="AboutSettings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="MenuTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="FooterTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="250" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="OpenTime" Type="datetime" />
+          <Property Name="ClosedTime" Type="datetime" />
+          <Property Name="TwitterContent" Type="nvarchar" MaxLength="250" />
+          <Property Name="Twitterlink" Type="nvarchar" MaxLength="250" />
+          <Property Name="TwitterTime" Type="datetime" />
+          <Property Name="CopyRightContent" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="AllBranPhoto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ContactSettings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="MenuTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="FooterTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="250" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="OpenTime" Type="datetime" />
+          <Property Name="ClosedTime" Type="datetime" />
+          <Property Name="TwitterContent" Type="nvarchar" MaxLength="250" />
+          <Property Name="Twitterlink" Type="nvarchar" MaxLength="250" />
+          <Property Name="TwitterTime" Type="datetime" />
+          <Property Name="CopyRightContent" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="IconBox">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="text" />
+          <Property Name="HoverIcon" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="LatestPost">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostDate" Type="datetime" />
+          <Property Name="PostTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostContent" Type="text" />
+          <Property Name="PostIcon" Type="nvarchar" MaxLength="100" />
+          <Property Name="IconTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="PostIcon2" Type="nvarchar" MaxLength="100" />
+          <Property Name="PostTitle2" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MiniSlider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="Link" Type="nvarchar" MaxLength="250" />
+          <Property Name="LinkContent" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandImage" Type="nvarchar" MaxLength="250" />
+          <Property Name="HeaderListName" Type="nvarchar" MaxLength="250" />
+          <Property Name="FooterContent" Type="text" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="250" />
+          <Property Name="FooterShortTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="FooterMainTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="250" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="SubscribeContent" Type="text" />
+          <Property Name="CopyRightContent" Type="text" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="Tittle1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tittle2" Type="nvarchar" MaxLength="100" />
+          <Property Name="LinkContent" Type="nvarchar" MaxLength="100" />
+          <Property Name="LinkAdress" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Testimonials">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Content" Type="nvarchar" MaxLength="250" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProfileTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProfileContent" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TestimonialsBody">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TestimonialsHeader">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="text" />
+          <Property Name="ProductOwner" Type="nvarchar" MaxLength="250" />
+          <Property Name="OwnerPosition" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TheGreatTeamArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="text" />
+        </EntityType>
+        <EntityType Name="WeAreBemaxArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Icon" Type="nvarchar" MaxLength="250" />
+          <Property Name="Link" Type="nvarchar" MaxLength="250" />
+          <Property Name="LinkTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="IconAreaContent" Type="nvarchar" MaxLength="250" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WhyChooseUsArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="WhyChooseIcon" Type="nvarchar" MaxLength="250" />
+          <Property Name="IconTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Content" Type="text" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkingWithOutArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Content" Type="text" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityContainer Name="BemaxModelStoreContainer">
+          <EntitySet Name="AboutFistContent" EntityType="Self.AboutFistContent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AboutRemax" EntityType="Self.AboutRemax" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AboutSettings" EntityType="Self.AboutSettings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AllBranPhoto" EntityType="Self.AllBranPhoto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContactSettings" EntityType="Self.ContactSettings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IconBox" EntityType="Self.IconBox" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LatestPost" EntityType="Self.LatestPost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MiniSlider" EntityType="Self.MiniSlider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Testimonials" EntityType="Self.Testimonials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestimonialsBody" EntityType="Self.TestimonialsBody" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestimonialsHeader" EntityType="Self.TestimonialsHeader" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TheGreatTeamArea" EntityType="Self.TheGreatTeamArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WeAreBemaxArea" EntityType="Self.WeAreBemaxArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WhyChooseUsArea" EntityType="Self.WhyChooseUsArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkingWithOutArea" EntityType="Self.WorkingWithOutArea" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BemaxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AboutFistContent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AboutRemax">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AboutSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MenuTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FooterTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OpenTime" Type="DateTime" Precision="3" />
+          <Property Name="ClosedTime" Type="DateTime" Precision="3" />
+          <Property Name="TwitterContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Twitterlink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TwitterTime" Type="DateTime" Precision="3" />
+          <Property Name="CopyRightContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AllBranPhoto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ContactSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MenuTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FooterTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OpenTime" Type="DateTime" Precision="3" />
+          <Property Name="ClosedTime" Type="DateTime" Precision="3" />
+          <Property Name="TwitterContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Twitterlink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TwitterTime" Type="DateTime" Precision="3" />
+          <Property Name="CopyRightContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="IconBox">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HoverIcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LatestPost">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostDate" Type="DateTime" Precision="3" />
+          <Property Name="PostTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PostIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IconTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PostIcon2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PostTitle2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MiniSlider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LinkContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandImage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="HeaderListName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FooterContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Icon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FooterShortTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FooterMainTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SubscribeContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CopyRightContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Tittle1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tittle2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LinkContent" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LinkAdress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Testimonial">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Content" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TestimonialsBody">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TestimonialsHeader">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProductOwner" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerPosition" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TheGreatTeamArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="WeAreBemaxArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Icon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LinkTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IconAreaContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="WhyChooseUsArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="WhyChooseIcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IconTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="WorkingWithOutArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="BemaxEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AboutFistContents" EntityType="Self.AboutFistContent" />
+          <EntitySet Name="AboutRemaxes" EntityType="Self.AboutRemax" />
+          <EntitySet Name="AboutSettings" EntityType="Self.AboutSetting" />
+          <EntitySet Name="AllBranPhotoes" EntityType="Self.AllBranPhoto" />
+          <EntitySet Name="ContactSettings" EntityType="Self.ContactSetting" />
+          <EntitySet Name="IconBoxes" EntityType="Self.IconBox" />
+          <EntitySet Name="LatestPosts" EntityType="Self.LatestPost" />
+          <EntitySet Name="MiniSliders" EntityType="Self.MiniSlider" />
+          <EntitySet Name="Settings" EntityType="Self.Setting" />
+          <EntitySet Name="Sliders" EntityType="Self.Slider" />
+          <EntitySet Name="Testimonials" EntityType="Self.Testimonial" />
+          <EntitySet Name="TestimonialsBodies" EntityType="Self.TestimonialsBody" />
+          <EntitySet Name="TestimonialsHeaders" EntityType="Self.TestimonialsHeader" />
+          <EntitySet Name="TheGreatTeamAreas" EntityType="Self.TheGreatTeamArea" />
+          <EntitySet Name="WeAreBemaxAreas" EntityType="Self.WeAreBemaxArea" />
+          <EntitySet Name="WhyChooseUsAreas" EntityType="Self.WhyChooseUsArea" />
+          <EntitySet Name="WorkingWithOutAreas" EntityType="Self.WorkingWithOutArea" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BemaxModelStoreContainer" CdmEntityContainer="BemaxEntities2">
+          <EntitySetMapping Name="AboutFistContents">
+            <EntityTypeMapping TypeName="BemaxModel.AboutFistContent">
+              <MappingFragment StoreEntitySet="AboutFistContent">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AboutRemaxes">
+            <EntityTypeMapping TypeName="BemaxModel.AboutRemax">
+              <MappingFragment StoreEntitySet="AboutRemax">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AboutSettings">
+            <EntityTypeMapping TypeName="BemaxModel.AboutSetting">
+              <MappingFragment StoreEntitySet="AboutSettings">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="MenuTitle" ColumnName="MenuTitle" />
+                <ScalarProperty Name="FooterTitle" ColumnName="FooterTitle" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="OpenTime" ColumnName="OpenTime" />
+                <ScalarProperty Name="ClosedTime" ColumnName="ClosedTime" />
+                <ScalarProperty Name="TwitterContent" ColumnName="TwitterContent" />
+                <ScalarProperty Name="Twitterlink" ColumnName="Twitterlink" />
+                <ScalarProperty Name="TwitterTime" ColumnName="TwitterTime" />
+                <ScalarProperty Name="CopyRightContent" ColumnName="CopyRightContent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AllBranPhotoes">
+            <EntityTypeMapping TypeName="BemaxModel.AllBranPhoto">
+              <MappingFragment StoreEntitySet="AllBranPhoto">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactSettings">
+            <EntityTypeMapping TypeName="BemaxModel.ContactSetting">
+              <MappingFragment StoreEntitySet="ContactSettings">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="MenuTitle" ColumnName="MenuTitle" />
+                <ScalarProperty Name="FooterTitle" ColumnName="FooterTitle" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="OpenTime" ColumnName="OpenTime" />
+                <ScalarProperty Name="ClosedTime" ColumnName="ClosedTime" />
+                <ScalarProperty Name="TwitterContent" ColumnName="TwitterContent" />
+                <ScalarProperty Name="Twitterlink" ColumnName="Twitterlink" />
+                <ScalarProperty Name="TwitterTime" ColumnName="TwitterTime" />
+                <ScalarProperty Name="CopyRightContent" ColumnName="CopyRightContent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IconBoxes">
+            <EntityTypeMapping TypeName="BemaxModel.IconBox">
+              <MappingFragment StoreEntitySet="IconBox">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="HoverIcon" ColumnName="HoverIcon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LatestPosts">
+            <EntityTypeMapping TypeName="BemaxModel.LatestPost">
+              <MappingFragment StoreEntitySet="LatestPost">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="PostDate" ColumnName="PostDate" />
+                <ScalarProperty Name="PostTitle" ColumnName="PostTitle" />
+                <ScalarProperty Name="PostContent" ColumnName="PostContent" />
+                <ScalarProperty Name="PostIcon" ColumnName="PostIcon" />
+                <ScalarProperty Name="IconTitle" ColumnName="IconTitle" />
+                <ScalarProperty Name="PostIcon2" ColumnName="PostIcon2" />
+                <ScalarProperty Name="PostTitle2" ColumnName="PostTitle2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiniSliders">
+            <EntityTypeMapping TypeName="BemaxModel.MiniSlider">
+              <MappingFragment StoreEntitySet="MiniSlider">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MainTitle" ColumnName="MainTitle" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="LinkContent" ColumnName="LinkContent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="BemaxModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BrandImage" ColumnName="BrandImage" />
+                <ScalarProperty Name="HeaderListName" ColumnName="HeaderListName" />
+                <ScalarProperty Name="FooterContent" ColumnName="FooterContent" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="FooterShortTitle" ColumnName="FooterShortTitle" />
+                <ScalarProperty Name="FooterMainTitle" ColumnName="FooterMainTitle" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SubscribeContent" ColumnName="SubscribeContent" />
+                <ScalarProperty Name="CopyRightContent" ColumnName="CopyRightContent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sliders">
+            <EntityTypeMapping TypeName="BemaxModel.Slider">
+              <MappingFragment StoreEntitySet="Slider">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Tittle1" ColumnName="Tittle1" />
+                <ScalarProperty Name="Tittle2" ColumnName="Tittle2" />
+                <ScalarProperty Name="LinkContent" ColumnName="LinkContent" />
+                <ScalarProperty Name="LinkAdress" ColumnName="LinkAdress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Testimonials">
+            <EntityTypeMapping TypeName="BemaxModel.Testimonial">
+              <MappingFragment StoreEntitySet="Testimonials">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="ProfileTitle" ColumnName="ProfileTitle" />
+                <ScalarProperty Name="ProfileContent" ColumnName="ProfileContent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestimonialsBodies">
+            <EntityTypeMapping TypeName="BemaxModel.TestimonialsBody">
+              <MappingFragment StoreEntitySet="TestimonialsBody">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestimonialsHeaders">
+            <EntityTypeMapping TypeName="BemaxModel.TestimonialsHeader">
+              <MappingFragment StoreEntitySet="TestimonialsHeader">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="ProductOwner" ColumnName="ProductOwner" />
+                <ScalarProperty Name="OwnerPosition" ColumnName="OwnerPosition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TheGreatTeamAreas">
+            <EntityTypeMapping TypeName="BemaxModel.TheGreatTeamArea">
+              <MappingFragment StoreEntitySet="TheGreatTeamArea">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeAreBemaxAreas">
+            <EntityTypeMapping TypeName="BemaxModel.WeAreBemaxArea">
+              <MappingFragment StoreEntitySet="WeAreBemaxArea">
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="LinkTitle" ColumnName="LinkTitle" />
+                <ScalarProperty Name="IconAreaContent" ColumnName="IconAreaContent" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WhyChooseUsAreas">
+            <EntityTypeMapping TypeName="BemaxModel.WhyChooseUsArea">
+              <MappingFragment StoreEntitySet="WhyChooseUsArea">
+                <ScalarProperty Name="WhyChooseIcon" ColumnName="WhyChooseIcon" />
+                <ScalarProperty Name="IconTitle" ColumnName="IconTitle" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkingWithOutAreas">
+            <EntityTypeMapping TypeName="BemaxModel.WorkingWithOutArea">
+              <MappingFragment StoreEntitySet="WorkingWithOutArea">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
